@@ -9,7 +9,6 @@ import android.widget.Filter;
 import android.widget.TextView;
 
 import com.dnocode.google.apis.G;
-import com.dnocode.google.apis.places.GooglePlaces;
 import com.dnocode.google.apis.places.models.Place;
 import com.dnocode.google.apis.places.query.AutoCompleteSearchQuery;
 
