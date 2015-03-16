@@ -76,6 +76,7 @@ public class PlaceAutoCompleteAdapter extends ArrayAdapter<Place> {
 
     @Override
     public Filter getFilter() {
+
         Filter filter = new Filter() {
             @Override
             protected FilterResults performFiltering(CharSequence constraint) {

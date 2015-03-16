@@ -1,13 +1,14 @@
 
 package com.dnocode.google.apis.commons.models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
-public class AddressComponent {
+public class AddressComponent implements Serializable{
 
     private String longName;
     private String shortName;
