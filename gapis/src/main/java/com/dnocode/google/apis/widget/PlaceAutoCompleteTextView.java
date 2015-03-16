@@ -21,7 +21,7 @@ public class PlaceAutoCompleteTextView extends AutoCompleteTextView {
     private final int THRESHOLD = 3;
     private final static int DELAY = 750;
     private String apiKey;
-    private GooglePlaces googlePlaces;
+
     private AutoCompleteSearchQuery query = new AutoCompleteSearchQuery();
 
     // DELAY
@@ -36,11 +36,10 @@ public class PlaceAutoCompleteTextView extends AutoCompleteTextView {
 
     public PlaceAutoCompleteTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        // TODO get apiKey from xml res
-        googlePlaces = new GooglePlaces(/*apiKey*/"AIzaSyBM3Ov7SmGwG8WbBJQDdGZSNXKDjUk0ySE");
+
         setDelay(DELAY);
         setThreshold(THRESHOLD);
-        setAdapter(new PlaceAutoCompleteAdapter(context, googlePlaces, android.R.layout.simple_spinner_dropdown_item, query));
+        setAdapter(new PlaceAutoCompleteAdapter(context, android.R.layout.simple_spinner_dropdown_item, query));
     }
 
     // PUBLIC METHODS
