@@ -28,4 +28,17 @@ import java.util.List;
         @Expose
         public List<Term> terms = new ArrayList<Term>();
 
+
+     public boolean containTerm(String constraint){
+
+         for(Term term :terms){
+
+             if(term.value.toLowerCase().equals(constraint.toLowerCase())){return true;}
+
+         }
+
+         return false;
+
+     }
+
     }

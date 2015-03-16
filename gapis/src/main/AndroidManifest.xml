@@ -27,8 +27,8 @@
         </activity>
 
 
-        <meta-data
-            android:name="com.dnocode.google.apis.key" android:value="@string/KEY" />
+      <!--  <meta-data
+            android:name="com.dnocode.google.apis.key" android:value="@string/KEY" />-->
 
     </application>
 
