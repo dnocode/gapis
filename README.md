@@ -22,7 +22,7 @@ right now it includes:
 
 To use the library is necessary to enter in the manifest the google server key as below.
 
- *<meta-data android:name="com.dnocode.google.apis.key" android:value="@string/KEY" />*
+ \<meta-data android:name="com.dnocode.google.apis.key" android:value="@string/KEY" />
 
 ## CODE EXAMPLE
  
