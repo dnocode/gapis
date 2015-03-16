@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Filter;
 import android.widget.TextView;
 
+import com.dnocode.google.apis.G;
 import com.dnocode.google.apis.places.GooglePlaces;
 import com.dnocode.google.apis.places.models.Place;
 import com.dnocode.google.apis.places.query.AutoCompleteSearchQuery;
@@ -28,14 +29,13 @@ public class PlaceAutoCompleteAdapter extends ArrayAdapter<Place> {
     protected LayoutInflater mInflater;
     private int mResource;
     protected AutoCompleteSearchQuery mQuery;
-    protected GooglePlaces mGooglePlaces;
 
-    public PlaceAutoCompleteAdapter(Context context, GooglePlaces googlePlaces, int textViewResourceId, AutoCompleteSearchQuery placeQuery) {
+    public PlaceAutoCompleteAdapter(Context context, int textViewResourceId, AutoCompleteSearchQuery placeQuery) {
         super(context, textViewResourceId);
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mResource = textViewResourceId;
         mQuery = placeQuery;
-        mGooglePlaces = googlePlaces;
+
     }
 
     @Override
@@ -110,7 +110,7 @@ public class PlaceAutoCompleteAdapter extends ArrayAdapter<Place> {
         try {
             mQuery.setInput(constraint);
 
-                 places = mGooglePlaces.getPredictions(mQuery);
+                 places = G.api(getContext()).places().getPredictions(mQuery);
 
 
         } catch (IOException e) {
